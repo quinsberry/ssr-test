@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.links .link {
+  margin-right: 20px;
+}
+
+.stage1-wrapper form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
