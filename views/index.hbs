@@ -2,15 +2,49 @@
 <html lang="en">
 
 <body>
-  <div class="stages">
-    <ul class="links">
-      <li class="link">
-        <a href="/stage1">Stage1</a>
-      </li>
-      <li class="link">
-        <a href="/stage2">Stage2</a>
-      </li>
-    </ul>
+  <div class="stage1-wrapper">
+    <div class="banner">
+      <h3>Not finished</h3>
+    </div>
+    <form class="col s12" method="POST" action="/form">
+      <div class="input-field col s12">
+        <input id="name" name="name" type="text" class="validate" length="20" required="" aria-required="true">
+        <label for="name">Name</label>
+      </div>
+      <div class="input-field col s12">
+        <input id="email" name="email" type="email" class="validate" required="" aria-required="true">
+        <label for="email" data-error="email is not valid" data-success="good">Email</label>
+      </div>
+      <div class="row main-phone">
+        <div class="input-field col s9">
+          <input id="phone" name="phone" type="text" class="validate" required="" aria-required="true">
+          <label for="phone" data-error="phone is not valid" data-success="good">Phone</label>
+        </div>
+        <div class="input-field col s2">
+          <button class="btn btn-add waves-effect waves-light" type="submit" name="action">add</button>
+        </div>
+      </div>
+      <div class="input-field col s12">
+        <input id="age" name="age" type="number" class="validate" required="" aria-required="true">
+        <label for="age" data-error="age is not valid" data-success="good">Age</label>
+      </div>
+      <div class="file-field input-field">
+        <div class="btn btn-file">
+          <span>Choose file</span>
+          <input type="file" name="file">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+      <div class="input-field col s12">
+        <textarea id="textarea1" name="resume" class="materialize-textarea" required="" aria-required="true"></textarea>
+        <label for="textarea1" data-error="phone is invalid" data-success="good">Resume</label>
+      </div>
+      <div class="input-field col s12">
+        <button class="btn btn-submit waves-effect waves-light" type="submit" name="action">Submit</button>
+      </div>
+    </form>
   </div>
 </body>
 

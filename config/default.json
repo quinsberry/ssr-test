@@ -1,0 +1,5 @@
+{
+  "port": "80",
+  "mongoUri": "mongodb+srv://username:123pass@cluster0-spiep.mongodb.net/stages",
+  "mongoUriImages": "mongodb+srv://username:123pass@cluster0-spiep.mongodb.net/images"
+}

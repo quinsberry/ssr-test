@@ -12,7 +12,7 @@ body {
 
 .wrapper {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -26,8 +26,79 @@ body {
   margin-right: 20px;
 }
 
+.stage1-wrapper {
+  position: relative;
+  min-width: 320px;
+}
+
 .stage1-wrapper form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.banner {
+  font-family: 'Roboto', sans-serif;
+}
+
+.banner h3 {
+  text-align: center;
+  margin: 0;
+  opacity: 0.3;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.row {
+  margin-bottom: 0 !important;
+}
+
+/* file input style */
+
+.btn-file {
+  height: 2rem !important;
+  line-height: 2rem !important;
+}
+.file-path {
+  height: 2rem !important;
+}
+
+.btn-file span {
+  font-size: 12px;
+}
+
+/* add-button style */
+
+.btn-add {
+  height: 2rem !important;
+  line-height: 2rem !important;
+  font-size: 12px;
+}
+.file-path {
+  height: 2rem !important;
+}
+
+/* main phone input styles */
+
+.main-phone .input-field input {
+  height: 2rem !important;
+  line-height: 2rem !important;
+}
+.main-phone .input-field label {
+  top: -10px !important;
+  left: 1.5rem !important;
+}
+
+/* submit btn styles */
+
+.btn-submit {
+  width: 100%;
+}
+
+/* ------------------- info page ------------------ */
+
+.server-feedback a {
+  margin: 0 !important;
 }

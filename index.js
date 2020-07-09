@@ -2,17 +2,18 @@ const express = require('express')
 const mongoose = require('mongoose')
 const exphbr = require('express-handlebars')
 const multer = require('multer')
+const config = require('config')
 
 const path = require('path')
 
 const stagesRouter = require('./routes/stages')
 
-const PORT = process.env.PORT || 4000
+const PORT = config.get('port') || 5000
 
 const app = express()
 const hbs = exphbr.create({
   defaultLayout: 'main',
-  extname: 'hbs'
+  extname: 'hbs',
 })
 
 // for server rendering
@@ -28,24 +29,25 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(stagesRouter)
 
+
 async function start() {
   try {
-    await mongoose.connect('mongodb+srv://username:123pass@cluster0-spiep.mongodb.net/stages', {
+    await mongoose.connect(config.get('mongoUri'), {
       useNewUrlParser: true,
       useFindAndModify: false,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
+    })
+
+    app.listen(PORT, (err) => {
+      if (err) {
+        throw Error(err)
+      }
+
+      console.log(`Server has been started on port:${PORT} ...`)
     })
   } catch (e) {
-    console.log(e)
+    console.log('Server errors: ', e)
   }
 }
-
-app.listen(PORT, err => {
-  if (err) {
-    throw Error(err)
-  }
-
-  console.log('Server has been started..')
-})
 
 start()
